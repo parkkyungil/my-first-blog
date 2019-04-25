@@ -6,7 +6,7 @@ def write(request):
     if request.method =='POST':
         form = Form(request.POST)
         if form.is_valid():
-            form.save()                       
+            form.save()
             form = Form()
     else:
         form = Form()
@@ -23,7 +23,15 @@ def list(request):
 
 def first(request):
     #return render(request, 'first.html')
-    return render(request, 'index.html')
+    if request.method =='POST':
+        form = Form(request.POST)
+        if form.is_valid():
+            form.save()
+            form = Form()
+    else:
+        form = Form()
+        
+    return render(request, 'index.html',{'form':form})
 
 def sample(request):
     #return render(request, 'first.html')

@@ -33,7 +33,8 @@
 								<li><a href="#portfolio" id="portfolio-link"><span class="icon fa-th">Portfolio</span></a></li>
 								<li><a href="#about" id="about-link"><span class="icon fa-user">About Me</span></a></li>
 								<li><a href="#contact" id="contact-link"><span class="icon fa-envelope">Contact</span></a></li>
-								<li><a href="/write/" id="input-link"><span class="icon fa-envelope">Input</span></a></li>
+								<!--<li><a href="/write/" id="input-link"><span class="icon fa-envelope">Input</span></a></li>-->
+								<li><a href="#input" id="input-link"><span class="icon fa-envelope">Input</span></a></li>
 							</ul>
 						</nav>
 
@@ -186,11 +187,8 @@
 						</div>
 					</section>
 
-			</div>
 
-
-
-			<!-- Input
+			<!-- Input -->
 				<section id="input" class="five">
 					<div class="container">
 
@@ -203,26 +201,37 @@
 						donec curae mus. Eleifend id porttitor ac ultricies lobortis sem nunc
 						orci ridiculus faucibus a consectetur. Porttitor curae mauris urna mi dolor.</p>
 
-						<form action="#"method="post">
-							{{ form.as_p }}
-							{% csrf_token %}
-							<button type = "submit" class = "btn btn-primary">저장</button>
-						</form>
+<!--
+<form method="post" action="#">
+	<div class="row">
+		<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
+		<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
+		<div class="col-12">
+			<textarea name="message" placeholder="Message"></textarea>
+		</div>
+		<div class="col-12">
+			<button type="submit" class = "btn btn-primary"> SAVE </button>
+		</div>
+	</div>
+</form>
 
-						-->
+</div>
+</section>
 
+</div>
+-->
 
+	<form action=""method="post">
+		{{ form.as_p }}
+		{% csrf_token %}
+	 <div class="col-12">
+		<button type = "submit" class = "btn btn-primary"> SAVE</button>
+		</div>
+	</form>
+	</div>
+	</section>
 
-
-
-
-
-
-
-
-
-
-
+	</div>
 
 		<!-- Footer -->
 			<div id="footer">
