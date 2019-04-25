@@ -6,7 +6,7 @@ def write(request):
     if request.method =='POST':
         form = Form(request.POST)
         if form.is_valid():
-            form.save()
+            form.save()                       
             form = Form()
     else:
         form = Form()
@@ -22,7 +22,12 @@ def list(request):
     return render(request, 'list.html',{'articleList': articleList})
 
 def first(request):
-    return render(request, 'first.html')
+    #return render(request, 'first.html')
+    return render(request, 'index.html')
+
+def sample(request):
+    #return render(request, 'first.html')
+    return render(request, '34338-wp3.html')
 
 def view(request, num="1"):
     article = Article.objects.get(id=num)

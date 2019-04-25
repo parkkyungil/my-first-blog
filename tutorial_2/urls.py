@@ -26,5 +26,6 @@ urlpatterns = [
     url(r'^test/', test, name = 'test'),
     url(r'^list/', list, name = 'list'),
     url(r'^view/(?P<num>[0-9]+)/$', view),
+    url(r'^sample/', sample , name = 'sample'),
     url(r'^', first, name = 'form')
 ]
